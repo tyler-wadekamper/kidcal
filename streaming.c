@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <pigpio.h>
 
-#define CLOCK_PIN 23
-#define DATA_PIN 24
+#define CLOCK_PIN 14
+#define DATA_PIN 10
 
 void setup() {
     if (gpioInitialise() < 0) {
