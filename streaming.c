@@ -38,7 +38,7 @@ int read_HX711() {
     int data = 0;
     int count = 0;
     while (gpioRead(DATA_PIN)); // Wait for DATA_PIN to go low
-    for (int i = 0; i < 26; i++) {
+    for (int i = 0; i < 28; i++) {
         gpioWrite(CLOCK_PIN, 1); // Send pulse
         gpioWrite(CLOCK_PIN, 0); // End pulse
         data |= gpioRead(DATA_PIN) << (23 - i); // Read bit and add to data
