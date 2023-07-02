@@ -23,7 +23,7 @@ function App() {
   }, [weight, tareOffset]);
 
   useEffect(() => {
-    const websocket = new WebSocket("wss://67.185.149.38");
+    const websocket = new WebSocket("wss://67.185.149.38:80");
 
     websocket.onopen = () => {
       console.log("Secure WebSocket Client Connected");
