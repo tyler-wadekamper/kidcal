@@ -23,7 +23,7 @@ function App() {
   }, [weight, tareOffset]);
 
   useEffect(() => {
-    const websocket = new WebSocket("wss://67.185.149.38:80");
+    const websocket = new WebSocket("wss://192.168.1.21:8080");
 
     websocket.onopen = () => {
       console.log("Secure WebSocket Client Connected");
@@ -46,7 +46,7 @@ function App() {
   }
 
   return (
-    <div class="container">
+    <div className="container">
       <h1>Kidcal</h1>
       {weight ? (
         <p>
