@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-const CONVERSION_FACTOR = 49400;
+const CONVERSION_FACTOR = 53421;
 
 function App() {
   const [weight, setWeight] = useState(null);
-  const [tareOffset, setTareOffset] = useState(992000);
+  const [tareOffset, setTareOffset] = useState(1076100);
   const [convertedWeight, setConvertedWeight] = useState({
     pounds: 0,
     ounces: 0,
@@ -23,7 +23,7 @@ function App() {
   }, [weight, tareOffset]);
 
   useEffect(() => {
-    const websocket = new WebSocket("wss://192.168.1.21:8080");
+    const websocket = new WebSocket("ws://192.168.1.21:8080");
 
     websocket.onopen = () => {
       console.log("Secure WebSocket Client Connected");
