@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./App.css";
 
 const CONVERSION_FACTOR = 53421;
 
@@ -46,17 +47,22 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <h1>Kidcal</h1>
-      {weight ? (
-        <p>
-          {convertedWeight.pounds} lbs {convertedWeight.ounces} oz
-        </p>
-      ) : (
-        <p>No data yet...</p>
-      )}
-      <button onClick={handleTareScale}>Tare</button>
-      <button>Capture</button>
+    <div className="app-container">
+      <h1 className="app-title">Kidcal</h1>
+      <div className="weight-display">
+        {weight ? (
+          <p>
+            <span className="weight-value">
+              {convertedWeight.pounds} lbs {convertedWeight.ounces} oz
+            </span>
+          </p>
+        ) : (
+          <p>No data yet...</p>
+        )}
+      </div>
+      <button className="tare-button" onClick={handleTareScale}>
+        Tare
+      </button>
     </div>
   );
 }
