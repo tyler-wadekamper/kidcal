@@ -1,4 +1,5 @@
 # KidCal: Smart Scale Web Application
+<img src="https://github.com/tyler-wadekamper/kidcal/assets/69260294/0edf47dc-0675-4237-b4d6-014a4b1da6b3" alt="image" width="400"/>
 
 ## Overview
 
@@ -9,12 +10,15 @@ KidCal is a smart scale program designed to display real-time weight data on a l
 - **kidcal-stream**: Written in C, this component reads raw weight data from the scale and streams it to the front end. It ensures that the data is transmitted efficiently and accurately to `kidcal-display`.
 
 ## Hardware
+<img src="https://github.com/tyler-wadekamper/kidcal/assets/69260294/f3125539-df94-4e4b-a40c-3b5daa0e189c" alt="image" width="400"/>  
 
 - **Raspberry Pi**: Both the `kidcal-display` and `kidcal-stream` applications are hosted on a Raspberry Pi with wireless network access.
 
 - **HX711 ADC Breakout Board**: The HX711 is a 24 bit Analog to Digital Converter for weigh scales. The kidcal-streaming application interfaces directly with the HX711 to read raw weight data.
+<img src="https://github.com/tyler-wadekamper/kidcal/assets/69260294/2c7d7abc-325c-4e91-9a62-ae70a7b45dd9" alt="image" width="400"/>
 
 - **5KG Load Cells - Qty. 4**: One load cell sits at each corner of the scale, connected in parallel to the single HX711 ADC.
+<img src="https://github.com/tyler-wadekamper/kidcal/assets/69260294/b4f9d853-e3b8-4055-a879-9f8dc4a12265" alt="image" width="400"/>
 
 ## Setup and Configuration
 
@@ -125,4 +129,4 @@ Ensure you have a Raspberry Pi with a compatible OS installed. The Pi must conne
    Log into your router and edit the DHCP IP range to exclude this IP to avoid conflicts.
 
 10. **Verify that the setup is correct**:
-    Power cycle the raspberry pi and verify that your Pi is connected to the network at 192.168.1.21, the streaming application is running, and the react application is running. You should noe be able to connect to the web application and see the real-time weight data!
+    Power cycle the raspberry pi and verify that your Pi is connected to the network at 192.168.1.21, the streaming application is running, and the react application is running. You should now be able to connect to the web application and see the real-time weight data!
